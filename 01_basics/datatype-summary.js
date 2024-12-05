@@ -32,3 +32,26 @@ const myFunction = function(){
 }
 
 console.log(typeof scoreValue);
+
+
+// Stack(Primitive), Non Primitive(Heap)
+let youTubeName = "abc";
+let anotherName = youTubeName;
+anotherName = "xyz"
+
+console.log(youTubeName); //abc
+console.log(anotherName); //xyz : copied values changed, but OG is same
+
+
+let userOne = {
+    email : "aasdf@gmail.com",
+    upi : "23432421@upi"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "mnbv@gmail.com";
+// here both object share same reference so value will be changed of both
+console.log(userOne.email); // mnbv@gmail.com
+console.log(userTwo.email); // mnbv@gmail.com
+
